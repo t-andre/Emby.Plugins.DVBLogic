@@ -1,0 +1,65 @@
+﻿<schedules xmlns="http://www.dvblogic.com">
+  <schedule>
+    <schedule_id/> - string mandatory
+    <user_param/> - string mandatory
+    <force_add/> - bool mandatory, If true this flag indicates that schedule has to be added even
+    if there are timer conflicts.
+    <margine_before/> - int mandatory, margin value in seconds
+    <margine_after/> - int mandatory, margin value in seconds
+    <by_epg>
+      <channel_id/> - string mandatory
+      <program_id/> - string mandatory, an id of program to record
+      <repeat/> - bool optional, indicates whether to record program series
+      <new_only/> - bool optional, indicates that only new programs have to be recorded
+      <record_series_anytime/> - bool optional, indicates whether to record only series
+      starting around original program start time or any of them
+      <recordings_to_keep/> - int mandatory for series recording (1,2,3,4,5,6,7,10; 0 –
+      keep all)
+      <program>
+        - mandatory, program metadata, which was used to set this schedule
+        The same fields as for program
+        element in search_epg function
+      </program>
+    </by_epg>
+    <manual>
+      <channel_id/> - string mandatory
+      <title/> - string mandatory
+      <start_time/> - long mandatory
+      <duration/> - int mandatory
+      <day_mask/> — int mandatory (DAY_MASK_SUN = 1, DAY_MASK_MON = 2,
+      DAY_MASK_TUE = 4, DAY_MASK_WED = 8, DAY_MASK_THU = 16, DAY_MASK_FRI = 32,
+      DAY_MASK_SAT = 64, DAY_MASK_DAILY = 255)
+      <recordings_to_keep/> - int mandatory for repeated recordings (1,2,3,4,5,6,7,10; 0 –
+      keep all)
+    </manual>
+
+    <by_pattern>
+      <channel_id/> - string mandatory
+      <key_phrase/> - string optional (either key_phrase or genre_mask or both should be
+      present)
+      <genre_mask/> — long optional (Genre mask has the following values for genres:
+      RDGC_ANY = 0x00000000,
+      RDGC_NEWS = 0x00000001,
+      RDGC_KIDS = 0x00000002,
+      RDGC_MOVIE = 0x00000004,
+      RDGC_SPORT = 0x00000008,
+      RDGC_DOCUMENTARY = 0x00000010,
+      RDGC_ACTION = 0x00000020,
+      RDGC_COMEDY = 0x00000040,
+      RDGC_DRAMA = 0x00000080,
+      RDGC_EDU = 0x00000100,
+      RDGC_HORROR = 0x00000200,
+      RDGC_MUSIC = 0x00000400,
+      RDGC_REALITY = 0x00000800,
+      RDGC_ROMANCE = 0x00001000,
+      RDGC_SCIFI = 0x00002000,
+      RDGC_SERIAL = 0x00004000,
+      RDGC_SOAP = 0x00008000,
+      RDGC_SPECIAL = 0x00010000,
+      RDGC_THRILLER = 0x00020000,
+      RDGC_ADULT = 0x00040000)
+      <recordings_to_keep/> - int mandatory for repeated recordings (1,2,3,4,5,6,7,10; 0 – keep
+      all)
+    </by_pattern>
+  </schedule>
+</schedules>

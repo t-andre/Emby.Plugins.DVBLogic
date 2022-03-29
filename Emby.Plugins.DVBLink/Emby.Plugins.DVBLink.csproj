@@ -1,0 +1,142 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AssemblyName>MediaBrowser.Plugins.DVBLink</AssemblyName>
+		<Company>Emby Team</Company>
+		<Description>DVBLink Live TV plugin for Emby</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>..\..\Emby.Server.NetCore\programdata\Plugins\</OutputPath>
+		<DefineConstants>TRACE;DEBUG;NET462</DefineConstants>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Configuration\dvblinkconfigPage.html" />
+		<None Remove="thumb.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Cache\CacheCollection.cs" Link="Client\Cache\CacheCollection.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Cache\CacheValues.cs" Link="Client\Cache\CacheValues.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Cache\DataCache.cs" Link="Client\Cache\DataCache.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Configurations\ServerConfiguration.cs" Link="Client\Configurations\ServerConfiguration.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Configurations\ServerStatus.cs" Link="Client\Configurations\ServerStatus.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumChannelType.cs" Link="Client\Constants\EnumChannelType.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumContainerType.cs" Link="Client\Constants\EnumContainerType.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumDayMask.cs" Link="Client\Constants\EnumDayMask.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumFavoriteFlags.cs" Link="Client\Constants\EnumFavoriteFlags.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumGenreMask.cs" Link="Client\Constants\EnumGenreMask.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumItemType.cs" Link="Client\Constants\EnumItemType.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumObjectType.cs" Link="Client\Constants\EnumObjectType.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumProfiles.cs" Link="Client\Constants\EnumProfiles.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumProtocols.cs" Link="Client\Constants\EnumProtocols.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumSchedulePriority.cs" Link="Client\Constants\EnumSchedulePriority.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumState.cs" Link="Client\Constants\EnumState.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumStatusCode.cs" Link="Client\Constants\EnumStatusCode.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumStreamRequest.cs" Link="Client\Constants\EnumStreamRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumStreamSourceType.cs" Link="Client\Constants\EnumStreamSourceType.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumStreamType.cs" Link="Client\Constants\EnumStreamType.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumTranscoders.cs" Link="Client\Constants\EnumTranscoders.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\EnumTVServerClientType.cs" Link="Client\Constants\EnumTVServerClientType.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Constants\LogSeverity.cs" Link="Client\Constants\LogSeverity.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\Channel.cs" Link="Client\Entities\Channels\Channel.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\Channels.cs" Link="Client\Entities\Channels\Channels.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\ChannelsRequest.cs" Link="Client\Entities\Channels\ChannelsRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\ChannelStream.cs" Link="Client\Entities\Channels\ChannelStream.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\ChannelUrl.cs" Link="Client\Entities\Channels\ChannelUrl.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\ChannelUrlRequest.cs" Link="Client\Entities\Channels\ChannelUrlRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\ChannelUrlStream.cs" Link="Client\Entities\Channels\ChannelUrlStream.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\PlayChannelRequest.cs" Link="Client\Entities\Channels\PlayChannelRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Channels\StopChannelRequest.cs" Link="Client\Entities\Channels\StopChannelRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Epg\ChannelIDList.cs" Link="Client\Entities\Epg\ChannelIDList.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Epg\EpgChannel.cs" Link="Client\Entities\Epg\EpgChannel.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Epg\EpgRequest.cs" Link="Client\Entities\Epg\EpgRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Epg\EpgSearcher.cs" Link="Client\Entities\Epg\EpgSearcher.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Favorites\Favorite.cs" Link="Client\Entities\Favorites\Favorite.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Favorites\Favorites.cs" Link="Client\Entities\Favorites\Favorites.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Favorites\FavoritesRequest.cs" Link="Client\Entities\Favorites\FavoritesRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Multicast\Multicast.cs" Link="Client\Entities\Multicast\Multicast.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Multicast\MulticastChannel.cs" Link="Client\Entities\Multicast\MulticastChannel.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Multicast\MulticastRequest.cs" Link="Client\Entities\Multicast\MulticastRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Parental\ParentalLock.cs" Link="Client\Entities\Parental\ParentalLock.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Parental\ParentalStatus.cs" Link="Client\Entities\Parental\ParentalStatus.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Parental\ParentalStatusRequest.cs" Link="Client\Entities\Parental\ParentalStatusRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Programs\Program.cs" Link="Client\Entities\Programs\Program.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Programs\Programs.cs" Link="Client\Entities\Programs\Programs.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Recordings\Recording.cs" Link="Client\Entities\Recordings\Recording.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Recordings\RecordingRemover.cs" Link="Client\Entities\Recordings\RecordingRemover.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Recordings\Recordings.cs" Link="Client\Entities\Recordings\Recordings.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Recordings\RecordingsRequest.cs" Link="Client\Entities\Recordings\RecordingsRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Recordings\RecordingStopRequest.cs" Link="Client\Entities\Recordings\RecordingStopRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Response\Response.cs" Link="Client\Entities\Response\Response.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Response\ResponseObject.cs" Link="Client\Entities\Response\ResponseObject.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\ByEpgSchedule.cs" Link="Client\Entities\Schedules\ByEpgSchedule.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\ManualSchedule.cs" Link="Client\Entities\Schedules\ManualSchedule.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\PatternSchedule.cs" Link="Client\Entities\Schedules\PatternSchedule.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\Schedule.cs" Link="Client\Entities\Schedules\Schedule.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\ScheduleAddRequest.cs" Link="Client\Entities\Schedules\ScheduleAddRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\ScheduleRemover.cs" Link="Client\Entities\Schedules\ScheduleRemover.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\Schedules.cs" Link="Client\Entities\Schedules\Schedules.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\SchedulesRequest.cs" Link="Client\Entities\Schedules\SchedulesRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Schedules\ScheduleUpdater.cs" Link="Client\Entities\Schedules\ScheduleUpdater.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\ObjectContainer.cs" Link="Client\Entities\ServerObjects\ObjectContainer.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\ObjectItem.cs" Link="Client\Entities\ServerObjects\ObjectItem.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\ObjectItemRecordedTV.cs" Link="Client\Entities\ServerObjects\ObjectItemRecordedTV.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\ObjectItemVideo.cs" Link="Client\Entities\ServerObjects\ObjectItemVideo.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\ObjectItemVideoInfo.cs" Link="Client\Entities\ServerObjects\ObjectItemVideoInfo.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\ObjectRemoverRequest.cs" Link="Client\Entities\ServerObjects\ObjectRemoverRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\Objects.cs" Link="Client\Entities\ServerObjects\Objects.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\ServerObjects\ObjectsRequest.cs" Link="Client\Entities\ServerObjects\ObjectsRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\RecordingSettings.cs" Link="Client\Entities\Server\RecordingSettings.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\RecordingSettingsRequest.cs" Link="Client\Entities\Server\RecordingSettingsRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\RecordingSettingsUpdater.cs" Link="Client\Entities\Server\RecordingSettingsUpdater.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\ServerInfo.cs" Link="Client\Entities\Server\ServerInfo.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\ServerInfoRequest.cs" Link="Client\Entities\Server\ServerInfoRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\Session.cs" Link="Client\Entities\Server\Session.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\SessionManager.cs" Link="Client\Entities\Server\SessionManager.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\StreamingCapabilities.cs" Link="Client\Entities\Server\StreamingCapabilities.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Server\StreamingCapabilitiesRequest.cs" Link="Client\Entities\Server\StreamingCapabilitiesRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Transcoder\StreamSourceInfo.cs" Link="Client\Entities\Transcoder\StreamSourceInfo.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Transcoder\Transcoder.cs" Link="Client\Entities\Transcoder\Transcoder.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Entities\Tuner\TunerInfo.cs" Link="Client\Entities\Tuner\TunerInfo.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\AbstractLogger.cs" Link="Client\Helpers\AbstractLogger.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\ConsoleLogger.cs" Link="Client\Helpers\ConsoleLogger.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\DateTimeExtensions.cs" Link="Client\Helpers\DateTimeExtensions.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\EnumExtensions.cs" Link="Client\Helpers\EnumExtensions.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\FileSystem.cs" Link="Client\Helpers\FileSystem.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\GlobalExtensions.cs" Link="Client\Helpers\GlobalExtensions.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\NullLogger.cs" Link="Client\Helpers\NullLogger.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\ProxieLogger.cs" Link="Client\Helpers\ProxieLogger.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Helpers\TranscoderHelper.cs" Link="Client\Helpers\TranscoderHelper.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\HttpClientBase.cs" Link="Client\HttpClientBase.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Interfaces\ILogger.cs" Link="Client\Interfaces\ILogger.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Interfaces\IRequest.cs" Link="Client\Interfaces\IRequest.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\Interfaces\ITVServerClient.cs" Link="Client\Interfaces\ITVServerClient.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\TVServerClient.cs" Link="Client\TVServerClient.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Client\TVServerHttpClient.cs" Link="Client\TVServerHttpClient.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Configuration\IPluginConfiguration.cs" Link="Configuration\IPluginConfiguration.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Configuration\OtherOptions.cs" Link="Configuration\OtherOptions.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Configuration\PluginConfigurationBase.cs" Link="Configuration\PluginConfigurationBase.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Helpers\ChannelHelper.cs" Link="Helpers\ChannelHelper.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Helpers\PluginLogger.cs" Link="Helpers\PluginLogger.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\IDVBLogicPlugin.cs" Link="IDVBLogicPlugin.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\LiveTvServiceBase.cs" Link="LiveTvServiceBase.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Proxies\PluginHttpClient.cs" Link="Proxies\PluginHttpClient.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\Proxies\TVServiceProxy.cs" Link="Proxies\TVServiceProxy.cs" />
+		<Compile Include="..\Emby.Plugins.TVMosaic\RecordingsChannelBase.cs" Link="RecordingsChannelBase.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Configuration\dvblinkconfigPage.html" />
+		<EmbeddedResource Include="thumb.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediaBrowser.Server.Core" Version="4.5.0.28" />
+		<PackageReference Include="System.Memory" Version="4.5.4" />
+		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+	</ItemGroup>
+</Project>

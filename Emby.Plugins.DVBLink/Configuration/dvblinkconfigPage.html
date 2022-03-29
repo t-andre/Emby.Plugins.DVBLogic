@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DVBLink</title>
+</head>
+<body>
+	<br />
+	<div id="dvblinkConfigurationPage" data-role="page" class="page type-interior pluginConfigurationPage dvblinkConfigurationPage" data-require="emby-button,emby-input,emby-checkbox,emby-collapse,emby-select">
+		<div data-role="content">
+			<div class="content-primary">
+				<h1>DVBLink</h1>
+
+				<form class="dvblinkConfigurationForm">
+					<h2 id="serverStatusHeader">Server Status</h2>
+					<div id="serverStatusSection" class="paperList" style="padding: 1em;">
+						<div id="serverStatusContent">
+						</div>
+					</div>
+					<br />
+						<div class="checkboxContainer checkboxContainer-withDescription">
+							<label class="mdl-checkbox mdl-js-checkbox">
+								<input is="emby-checkbox" type="checkbox" id="chkServerEnable" data-embycheckbox="false" />
+								<span class="checkboxLabel">Enable TVMosaic server</span>
+							</label>
+							<div class="fieldDescription">
+							</div>
+						</div>
+						<br />
+					<h2 id="connectionHeader">Connection and Authentication</h2>
+					<div id="connectionSection" is="emby-collapse" title="Connection">
+						<div id="connectionContent" class="collapseContent">
+							<div class="inputContainer">
+								<input is="emby-input" type="text" id="txtServerIp" name="txtServerIp" label="Server IP:" required />
+								<div class="fieldDescription">
+									Only the IP address of DVBLink server
+								</div>
+							</div>
+							<div class="inputContainer">
+								<input is="emby-input" type="text" id="txtServerPort" name="txtServerPort" label="Server Port:" required />
+								<div class="fieldDescription">
+									Server Api port for DVBLink server (default : 8100)
+								</div>
+							</div>
+							<div class="inputContainer">
+								<input is="emby-input" type="text" id="txtStreamingPort" name="txtStreamingPort" label="Streaming Port:" required />
+								<div class="fieldDescription">
+									Streaming port for DVBLink server (default : 8101)
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="authenticationSection" is="emby-collapse" title="Authentication">
+						<div id="authenticationContent" class="collapseContent">
+							<div class="checkboxContainer">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkUseAuthorization" data-embycheckbox="false" />
+									<span class="checkboxLabel">Use server Authorization</span>
+								</label>
+							</div>
+							<div class="inputContainer">
+								<input is="emby-input" type="text" id="txtUserName" label="User Name" />
+							</div>
+							<div class="inputContainer">
+								<input is="emby-input" type="password" id="txtPassword" label="Password (saved in plain text)" />
+								<div class="fieldDescription">
+									Password encription coming soon...
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<br />
+					<h2 id="otherOptionsHeader">Other options</h2>
+					<div id="streamsection" is="emby-collapse" title="Streaming Options">
+						<div id="streamContent" class="collapseContent">
+							<div class="checkboxContainer checkboxContainer-withDescription">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkDirectStreamRequest" data-embycheckbox="false" />
+									<span class="checkboxLabel">Stream request Type : Raw transport stream via HTTP can be request either directly or indirectly</span>
+								</label>
+								<div class="fieldDescription">
+									unchecked - uses indirect request for transport stream (Indirect stream request works with a request handle api)<br />
+									checked   - Direct request for raw transport stream via HTTP (this option does not support timeshift)<br />
+									<b>Try each configuration and choose the best option for your system.</b>
+								</div>
+							</div>
+							<div class="inputContainer">
+								<input is="emby-input" type="text" id="txtLiveTVDuration" label="Duration for Live TV (Indirect Stream)" />
+								<div class="fieldDescription">
+									Is the timeout in minutes until channel playback is stopped by a server (indefinite if 0 or not specified)
+								</div>
+							</div>
+							<!--<div class="checkboxContainer">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkTimeshift" data-embycheckbox="false" />
+									<span class="checkboxLabel">Enable Timeshift</span>
+								</label>
+							</div>-->
+							<!--<div class="checkboxContainer">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkProbeLiveStream" data-embycheckbox="false" />
+									<span class="checkboxLabel"> Probe Live Stream</span>
+								</label>
+							</div>
+							<div class="checkboxContainer" style="visibility:hidden;">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkProbeRecordingStream" data-embycheckbox="false" />
+									<span class="checkboxLabel">Probe Recording Stream</span>
+								</label>
+							</div>-->
+							<!--<div class="checkboxContainer">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkForceInterlacedVideo" data-embycheckbox="false" />
+									<span class="checkboxLabel">Force Interlaced Video</span>
+								</label>
+							</div>-->
+							<div class="checkboxContainer">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkTranscode" data-embycheckbox="false" />
+									<span class="checkboxLabel">Enable server transcoder</span>
+								</label>
+							</div>
+						</div>
+
+					</div>
+
+					<div id="channelOptionssection" is="emby-collapse" title="Channel Options">
+						<div id="channelOptionsContent" class="collapseContent">
+							<div class="checkboxContainer">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkUseServerLogos" data-embycheckbox="false" />
+									<span class="checkboxLabel">Use Server Logos</span>
+								</label>
+							</div>
+							<div class="inputContainer">
+								<input is="emby-input" type="text" id="txtLogosPath" label="Channel's Logos Path" />
+								<div class="fieldDescription">
+									Specify the path where your channel's TV logos is stored, if not specified the plugin wil check in the metadata path LiveTvLogos
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="recordingOptionssection" is="emby-collapse" title="Recordings Options">
+						<div id="recordingOptionsContent" class="collapseContent">
+							<div class="checkboxContainer">
+								<label class="mdl-checkbox mdl-js-checkbox">
+									<input is="emby-checkbox" type="checkbox" id="chkUseServerRecordingPaddings" data-embycheckbox="false" />
+									<span class="checkboxLabel">Use Server Recording Padding</span>
+								</label>
+							</div>
+						</div>
+
+					</div>
+					<div id="favouritesOptionssection" is="emby-collapse" title="Favourites">
+						<div id="favouritesOptionsContent" class="collapseContent">
+							<div class="selectContainer">
+								<select is="emby-select" id="selectFavourite1" data-mini="true" label="Favourite 1:"></select>
+								<div class="fieldDescription">
+									Select the favourite group 1 you wish to use in Emby
+								</div>
+							</div>
+							<div class="selectContainer">
+								<select is="emby-select" id="selectFavourite2" data-mini="true" label="Favourite 2:"></select>
+								<div class="fieldDescription">
+									Select the favourite group 2 you wish to use in Emby
+								</div>
+							</div>
+							<div class="selectContainer">
+								<select is="emby-select" id="selectFavourite3" data-mini="true" label="Favourite 3:"></select>
+								<div class="fieldDescription">
+									Select the favourite group 3 you wish to use in Emby
+								</div>
+							</div>
+							<div class="selectContainer">
+								<select is="emby-select" id="selectFavourite4" data-mini="true" label="Favourite 4:"></select>
+								<div class="fieldDescription">
+									Select the favourite group 4 you wish to use in Emby
+								</div>
+							</div>
+							<div class="selectContainer">
+								<select is="emby-select" id="selectFavourite5" data-mini="true" label="Favourite 5:"></select>
+								<div class="fieldDescription">
+									Select the favourite group 5 you wish to use in Emby
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="sessionListsection" is="emby-collapse" title="Open streams">
+						<div id="fsessionListContent" class="collapseContent">
+							<div class="sessionList">
+							</div>
+						</div>
+					</div>
+					<br />
+					<br />
+					<div>
+						<button id="save" is="emby-button" type="submit" class="raised button-submit block emby-button">Save</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+
+			var DVBLinkConfigurationPage = {
+				pluginUniqueId: "8892fe7b-330a-4da8-b2d7-502bc4508c93"
+			};
+
+			var pageName = '.dvblinkConfigurationPage';
+
+			function ClosedSession(page) {
+				loadSessions(page);
+			}
+
+			function loadSessions(page) {
+
+				ApiClient.getJSON(ApiClient.getUrl("DVBLinkPlugin/Sessions")).then(function (result) {
+
+					var html = '';
+
+					if (result.length) {
+						html += '<div class="paperList">';
+					}
+
+					html += result.map(function (s) {
+
+						var deviceHtml = '';
+						deviceHtml += '<paper-icon-item>';
+
+						deviceHtml += '<paper-fab mini style="background:#999;" icon="tablet-android" item-icon></paper-fab>';
+
+						deviceHtml += '<paper-item-body three-line>';
+						deviceHtml += '<a class="clearLink">';
+
+						deviceHtml += '<div>';
+						deviceHtml += s.DeviceName;
+						deviceHtml += '</div>';
+
+						if (s.ClientName) {
+							deviceHtml += '<div secondary>';
+							deviceHtml += s.ClientName + " - " + s.UserName;
+							deviceHtml += '</div>';
+						}
+
+						if (s.DeviceId) {
+							deviceHtml += '<div secondary>';
+							deviceHtml += s.StreamSource + ' - ' + s.StreamStartTime;
+							deviceHtml += '</div>';
+						}
+
+						deviceHtml += '</a>';
+						deviceHtml += '</paper-item-body>';
+
+						if (s.StreamSource === 'LIVETV') {
+							deviceHtml += '<paper-icon-button icon="delete" data-id="' + s.SessionId + '" title="' + Globalize.translate('ButtonDelete') + '" class="btnDeletDVBLinkSession"></paper-icon-button>';
+							deviceHtml += '</paper-icon-item>';
+						}
+
+						return deviceHtml;
+
+					}).join('');
+
+					if (result.length) {
+						html += '</div>';
+					}
+
+					var elem = $('.sessionList', page).html(html).trigger('create');
+
+					$('.btnDeletDVBLinkSession', elem).on('click', function () {
+						ApiClient.getJSON(ApiClient.getUrl("DVBLinkPlugin/StopSession", { SessionId: this.getAttribute('data-id') })).then(function (result) {
+							loadSessions(page);
+						});
+
+					});
+				});
+			}
+
+			function loadSelects(config, page, favoriteButton, favoriteId) {
+
+				ApiClient.getJSON(ApiClient.getUrl("DVBLinkPlugin/Favourites")).then(function (result) {
+					$(favoriteButton, page).html(result.Items.map(function (favorite) {
+						var html = '';
+						var selectedText = favorite.Id === favoriteId ? " selected" : "";
+						return '<option value="' + favorite.Id + '"' + selectedText + '>' + favorite.Name + '</option>';
+					}));
+				});
+			}
+
+			function getServerStatus(page) {
+
+				ApiClient.getJSON(ApiClient.getUrl("DVBLinkPlugin/ServerStatus")).then(function (result) {
+					var html = '';
+					html += '<div>Name : ' + (result.Version > 6 ? 'TVMosaic' : 'DVBLink') + '</div>';
+					html += '<div>Version : ' + result.Version + '</div>';
+					html += '<div>Build : ' + result.Info.Build + '</div>';
+					html += '<div>IsAvailable : ' + result.IsAvailable + '</div>';
+					if (result.HasConnectionError) {
+						html += '<div>HasConnectionError : ' + result.HasConnectionError + '</div>';
+						html += '<div>ErrorMessage : ' + result.ErrorMessage + '</div>';
+					}
+					$(serverStatusContent, page).html(html);
+				});
+			}
+
+			$(pageName)
+				.on('pageinit', function (event) {
+
+					var page = this;
+
+					$("#save", page).click(function () {
+						saveConfiguration($(pageName));
+					});
+
+					$("#testConnection", page).click(function () {
+						getServerStatus(page);
+					});
+
+					$('form', page).on('submit', function (e) {
+						saveConfiguration(this);
+						return false; // Disable default form submission
+					});
+
+				})
+				.on('pageshow', function (event) {
+
+					loadConfiguration(this);
+
+				});
+
+			function loadConfiguration(page) {
+				Dashboard.showLoadingMsg();
+				ApiClient.getPluginConfiguration(DVBLinkConfigurationPage.pluginUniqueId).then(function (config) {
+
+					$('#txtServerIp', page).val(config.ServerConfig.ServerIp || "");
+					$('#txtServerPort', page).val(config.ServerConfig.ServerPort || "");
+					$('#txtStreamingPort', page).val(config.ServerConfig.StreamingPort || "");
+					$('#txtUserName', page).val(config.ServerConfig.UserName || "");
+					$('#txtPassword', page).val(config.ServerConfig.Password || "");
+					//$('#chkTimeshift', page).checked = config.ServerConfig.EnableTimeshift || false;
+					//$('#chkProbeLiveStream', page).checked = config.OtherOptions.ProbeLiveStream || false;
+					//$('#chkProbeRecordingStream', page).checked = config.OtherOptions.ProbeRecordingStream || false;
+					//$('#chkForceInterlacedVideo', page).checked = config.OtherOptions.ForceInterlacedVideo || false;
+					page.querySelector('#chkTranscode').checked = config.ServerConfig.Transcode || false;
+					page.querySelector('#chkDirectStreamRequest').checked = config.ServerConfig.DirectStreamRequest || false;
+					page.querySelector('#chkUseServerLogos').checked = config.ServerConfig.UseServerLogos || false;
+					page.querySelector('#chkUseAuthorization').checked = config.ServerConfig.UseAuthorization || false;
+					page.querySelector('#chkUseServerRecordingPaddings').checked = config.ServerConfig.UseServerRecordingPaddings || false;
+					$('#txtLiveTVDuration', page).val(config.ServerConfig.LiveTVDuration || "");
+					$('#txtLogosPath', page).val(config.ServerConfig.LogosPath || "");
+					page.querySelector('#chkServerEnable').checked = config.ServerConfig.Enable || false;
+
+					getServerStatus(page);
+					loadSessions(page);
+					loadSelects(config, page, '#selectFavourite1', config.OtherOptions.Favourite1);
+					loadSelects(config, page, '#selectFavourite2', config.OtherOptions.Favourite2);
+					loadSelects(config, page, '#selectFavourite3', config.OtherOptions.Favourite3);
+					loadSelects(config, page, '#selectFavourite4', config.OtherOptions.Favourite4);
+					loadSelects(config, page, '#selectFavourite5', config.OtherOptions.Favourite5);
+				});
+				Dashboard.hideLoadingMsg();
+			}
+
+			function saveConfiguration(form) {
+				Dashboard.showLoadingMsg();
+				ApiClient.getPluginConfiguration(DVBLinkConfigurationPage.pluginUniqueId).then(function (config) {
+
+					config.ServerConfig.ServerIp = $('#txtServerIp', form).val();
+					config.ServerConfig.ServerPort = $('#txtServerPort', form).val();
+					config.ServerConfig.StreamingPort = $('#txtStreamingPort', form).val();
+					config.ServerConfig.UserName = $('#txtUserName', form).val();
+					config.ServerConfig.Password = $('#txtPassword', form).val();
+					config.ServerConfig.StreamTypeString = $('#selectStreamType', form).val();
+					config.ServerConfig.Transcode = form.querySelector('#chkTranscode').checked;
+					config.ServerConfig.DirectStreamRequest = form.querySelector('#chkDirectStreamRequest').checked;
+					config.ServerConfig.UseServerLogos = form.querySelector('#chkUseServerLogos').checked;
+					config.ServerConfig.UseAuthorization = form.querySelector('#chkUseAuthorization').checked;
+					config.ServerConfig.UseServerRecordingPaddings = form.querySelector('#chkUseServerRecordingPaddings').checked;
+					config.ServerConfig.LiveTVDuration = $('#txtLiveTVDuration', form).val();
+					config.ServerConfig.LogosPath = $('#txtLogosPath', form).val();
+					config.ServerConfig.Enable = form.querySelector('#chkServerEnable').checked;
+
+					config.OtherOptions.Favourite1 = $('#selectFavourite1', form).val();
+					config.OtherOptions.Favourite2 = $('#selectFavourite2', form).val();
+					config.OtherOptions.Favourite3 = $('#selectFavourite3', form).val();
+					config.OtherOptions.Favourite4 = $('#selectFavourite4', form).val();
+					config.OtherOptions.Favourite5 = $('#selectFavourite5', form).val();
+
+					//config.ServerConfig.EnableTimeshift = $('#chkTimeshift', form).checked();
+					//config.OtherOptions.ProbeLiveStream = $('#chkProbeLiveStream', form).checked();
+					//config.OtherOptions.ProbeRecordingStream = $('#chkProbeRecordingStream', form).checked();
+					//config.OtherOptions.ForceInterlacedVideo = $('#chkForceInterlacedVideo', form).checked();
+
+					ApiClient.updatePluginConfiguration(DVBLinkConfigurationPage.pluginUniqueId, config).then(Dashboard.processPluginConfigurationUpdateResult);
+				});
+
+				Dashboard.hideLoadingMsg();
+			}
+		</script>
+
+
+
+	</div>
+
+</body>
+</html>

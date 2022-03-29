@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AssemblyName>Emby.Plugins.TVMosaic</AssemblyName>
+		<Company>Emby Team</Company>
+		<Description>TVMosaic Live TV plugin for Emby</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>..\..\Emby.Server.NetCore\programdata\Plugins\</OutputPath>
+		<DefineConstants>TRACE;DEBUG;NET462</DefineConstants>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Remove="Configuration\tvmosaicconfigPage.html" />
+		<None Remove="thumb.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Configuration\tvmosaicconfigPage.html" />
+		<EmbeddedResource Include="thumb.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediaBrowser.Server.Core" Version="4.5.0.28" />
+		<PackageReference Include="System.Memory" Version="4.5.4" />
+		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+	</ItemGroup>
+</Project>

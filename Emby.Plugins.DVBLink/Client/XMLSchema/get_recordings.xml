@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<recordings xmlns="http://www.dvblogic.com">
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1420540800</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1420540800</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>412</subname>
+			<categories>movie</categories>
+			<start_time>1420540800</start_time>
+			<duration>1800</duration>
+			<episode_num>94</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>3-12640000-1420553400</recording_id>
+		<schedule_id>3</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1420553400</program_id>
+			<name>Modern Family</name>
+			<short_desc>Les Dunphy et les Pritchett décident d'organiser ensemble un Noël en moins de 24 heures et la situation dégénère un peu. Phil et Manny s'occupent de la dinde, Claire et Haley des cadeaux, Gloria et Luke de l'ange et Mitch, Lilly et Alex du sapin, alors que Jay et Cameron emballent les cadeaux.</short_desc>
+			<subname>Noël express</subname>
+			<actors>Ed O'neill/Julie Bowen/Sofia Vergara/Ty Burrell/Rico Rodriguez/Jesse Tyler Ferguson/Eric Stonestreet</actors>
+			<categories>serie</categories>
+			<image>http://static.timefor.tv/imgs/print_img.php?sti=imgs/epg/channel/2015-01-06/51092e6052aec.jpg&amp;height=300&amp;width=300</image>
+			<start_time>1420553400</start_time>
+			<duration>1500</duration>
+			<episode_num>10</episode_num>
+			<season_num>3</season_num>
+			<cat_serial>true</cat_serial>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>4-12640000-1420618800</recording_id>
+		<schedule_id>4</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1420618800</program_id>
+			<name>Suits</name>
+			<short_desc>Daniel Hardman joue un mauvais tour à son ancien cabinet quand il s'empare de la défense dans l'affaire de discrimination de genre. De son côté, Rachel à des doutes concernant son inscription à la faculté de Droit d'Harvard.</short_desc>
+			<subname>Sous le feu ennemi</subname>
+			<actors>Patrick J. Adams/Gabriel Macht/Gina Torres/Meghan Markle/Rick Hoffman</actors>
+			<start_time>1420618800</start_time>
+			<duration>2400</duration>
+			<episode_num>14</episode_num>
+			<season_num>2</season_num>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>4-12640000-1420621200</recording_id>
+		<schedule_id>4</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1420621200</program_id>
+			<name>Suits</name>
+			<short_desc>Alors que Jessica et Harvey font face à la dernière menace de Hardman, Dana Scott revient avec tout le pouvoir de son cabinet derrière elle.</short_desc>
+			<subname>Point stratégique</subname>
+			<actors>Patrick J. Adams/Gabriel Macht/Gina Torres/Meghan Markle/Rick Hoffman</actors>
+			<start_time>1420621200</start_time>
+			<duration>2700</duration>
+			<episode_num>15</episode_num>
+			<season_num>2</season_num>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1420627200</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1420627200</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>413</subname>
+			<categories>movie</categories>
+			<start_time>1420627200</start_time>
+			<duration>2100</duration>
+			<episode_num>95</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1420713600</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1420713600</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>414</subname>
+			<categories>movie</categories>
+			<start_time>1420713600</start_time>
+			<duration>1800</duration>
+			<episode_num>96</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1420800000</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1420800000</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>415</subname>
+			<categories>movie</categories>
+			<start_time>1420800000</start_time>
+			<duration>2100</duration>
+			<episode_num>97</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1421059200</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1421059200</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>416</subname>
+			<categories>documentary/serie</categories>
+			<image>http://static.timefor.tv/imgs/print_img.php?sti=imgs/epg/channel/2015-01-12/54a4b66611839.jpg&amp;height=300&amp;width=300</image>
+			<start_time>1421059200</start_time>
+			<duration>1800</duration>
+			<episode_num>98</episode_num>
+			<cat_documentary>true</cat_documentary>
+			<cat_serial>true</cat_serial>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1421145600</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1421145600</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>417</subname>
+			<categories>movie</categories>
+			<start_time>1421145600</start_time>
+			<duration>1800</duration>
+			<episode_num>99</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>4-12640000-1421221500</recording_id>
+		<schedule_id>4</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1421221500</program_id>
+			<name>Suits</name>
+			<short_desc>Harvey et Jessica s'inquiètent pour l'avenir du cabinet, quand un cabinet anglais leur présente une proposition attrayante.</short_desc>
+			<subname>Sauver le soldat Mike</subname>
+			<actors>Patrick J. Adams/Gabriel Macht/Gina Torres/Meghan Markle/Rick Hoffman</actors>
+			<start_time>1421221500</start_time>
+			<duration>2400</duration>
+			<episode_num>16</episode_num>
+			<season_num>2</season_num>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1421232000</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1421232000</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>418</subname>
+			<categories>movie</categories>
+			<start_time>1421232000</start_time>
+			<duration>1800</duration>
+			<episode_num>100</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1421318400</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1421318400</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>419</subname>
+			<categories>movie</categories>
+			<image>http://static.timefor.tv/imgs/print_img.php?sti=imgs/epg/channel/2015-01-15/54a4b6e80ee47.jpg&amp;height=300&amp;width=300</image>
+			<start_time>1421318400</start_time>
+			<duration>1800</duration>
+			<episode_num>101</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1421404800</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1421404800</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>420</subname>
+			<categories>movie</categories>
+			<start_time>1421404800</start_time>
+			<duration>1800</duration>
+			<episode_num>102</episode_num>
+			<cat_movie>true</cat_movie>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+	<recording xmlns="http://www.dvblogic.com">
+		<recording_id>5-12640000-1421664000</recording_id>
+		<schedule_id>5</schedule_id>
+		<channel_id>12640000</channel_id>
+		<program xmlns="http://www.dvblogic.com">
+			<program_id>1421664000</program_id>
+			<name>Scènes de ménages</name>
+			<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+			<subname>421</subname>
+			<categories>documentary/serie</categories>
+			<start_time>1421664000</start_time>
+			<duration>1800</duration>
+			<episode_num>103</episode_num>
+			<cat_documentary>true</cat_documentary>
+			<cat_serial>true</cat_serial>
+			<is_series>true</is_series>
+			<is_record>true</is_record>
+			<is_repeat_record>true</is_repeat_record>
+		</program>
+	</recording>
+</recordings>
+

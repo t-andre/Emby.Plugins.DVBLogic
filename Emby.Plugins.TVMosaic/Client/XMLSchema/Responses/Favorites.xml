@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<favorites xmlns="http://www.dvblogic.com">
+  <favorite xmlns="http://www.dvblogic.com">
+    <id>05fb2341-cb4b-4d13-9b1b-ff2de9921b38</id>
+    <name>Favorites</name>
+    <channels>
+      <channel>10600000</channel>
+      <channel>10580000</channel>
+      <channel>10680000</channel>
+      <channel>10560000</channel>
+      <channel>10740000</channel>
+      <channel>10720000</channel>
+      <channel>10770000</channel>
+      <channel>10930000</channel>
+      <channel>11020000</channel>
+      <channel>10650000</channel>
+      <channel>10920000</channel>
+      <channel>10570000</channel>
+      <channel>10640000</channel>
+      <channel>10910000</channel>
+      <channel>10990000</channel>
+      <channel>10710000</channel>
+      <channel>11000000</channel>
+      <channel>10540000</channel>
+    </channels>
+  </favorite>
+  <favorite xmlns="http://www.dvblogic.com">
+    <id>93fdad96-aa9b-4ef7-86e8-22cbd722745f</id>
+    <name>Music</name>
+    <channels>
+      <channel>11000000</channel>
+      <channel>10630000</channel>
+      <channel>10780000</channel>
+      <channel>10900000</channel>
+      <channel>10660000</channel>
+    </channels>
+  </favorite>
+</favorites>
+
+

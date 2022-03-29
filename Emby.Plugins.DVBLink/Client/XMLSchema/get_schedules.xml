@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schedules xmlns="http://www.dvblogic.com">
+	<schedule xmlns="http://www.dvblogic.com">
+		<schedule_id>3</schedule_id>
+		<user_param/>
+		<margine_before>-1</margine_before>
+		<margine_after>-1</margine_after>
+		<by_epg xmlns="http://www.dvblogic.com">
+			<channel_id>12640000</channel_id>
+			<program_id>1420553400</program_id>
+			<record_series_anytime>true</record_series_anytime>
+			<recordings_to_keep>0</recordings_to_keep>
+			<program xmlns="http://www.dvblogic.com">
+				<program_id>1420553400</program_id>
+				<name>Modern Family</name>
+				<short_desc>Les Dunphy et les Pritchett décident d'organiser ensemble un Noël en moins de 24 heures et la situation dégénère un peu. Phil et Manny s'occupent de la dinde, Claire et Haley des cadeaux, Gloria et Luke de l'ange et Mitch, Lilly et Alex du sapin, alors que Jay et Cameron emballent les cadeaux.</short_desc>
+				<subname>Noël express</subname>
+				<actors>Ed O'neill/Julie Bowen/Sofia Vergara/Ty Burrell/Rico Rodriguez/Jesse Tyler Ferguson/Eric Stonestreet</actors>
+				<categories>serie</categories>
+				<image>http://static.timefor.tv/imgs/print_img.php?sti=imgs/epg/channel/2015-01-06/51092e6052aec.jpg&amp;height=300&amp;width=300</image>
+				<start_time>1420553400</start_time>
+				<duration>1500</duration>
+				<episode_num>10</episode_num>
+				<season_num>3</season_num>
+				<cat_serial>true</cat_serial>
+			</program>
+		</by_epg>
+		<manual xmlns="http://www.dvblogic.com">
+			<channel_id/>
+			<title/>
+			<start_time>0</start_time>
+			<duration>0</duration>
+			<day_mask>0</day_mask>
+			<recordings_to_keep>0</recordings_to_keep>
+		</manual>
+		<by_pattern xmlns="http://www.dvblogic.com">
+			<channel_id/>
+			<recordings_to_keep>0</recordings_to_keep>
+			<genre_mask>0</genre_mask>
+			<key_phrase/>
+		</by_pattern>
+	</schedule>
+	<schedule xmlns="http://www.dvblogic.com">
+		<schedule_id>4</schedule_id>
+		<user_param/>
+		<margine_before>-1</margine_before>
+		<margine_after>-1</margine_after>
+		<by_epg xmlns="http://www.dvblogic.com">
+			<channel_id>12640000</channel_id>
+			<program_id>1420618800</program_id>
+			<repeat>true</repeat>
+			<new_only>true</new_only>
+			<record_series_anytime>true</record_series_anytime>
+			<recordings_to_keep>0</recordings_to_keep>
+			<program xmlns="http://www.dvblogic.com">
+				<program_id>1420618800</program_id>
+				<name>Suits</name>
+				<short_desc>Daniel Hardman joue un mauvais tour à son ancien cabinet quand il s'empare de la défense dans l'affaire de discrimination de genre. De son côté, Rachel à des doutes concernant son inscription à la faculté de Droit d'Harvard.</short_desc>
+				<subname>Sous le feu ennemi</subname>
+				<actors>Patrick J. Adams/Gabriel Macht/Gina Torres/Meghan Markle/Rick Hoffman</actors>
+				<start_time>1420618800</start_time>
+				<duration>2400</duration>
+				<episode_num>14</episode_num>
+				<season_num>2</season_num>
+			</program>
+		</by_epg>
+		<manual xmlns="http://www.dvblogic.com">
+			<channel_id/>
+			<title/>
+			<start_time>0</start_time>
+			<duration>0</duration>
+			<day_mask>0</day_mask>
+			<recordings_to_keep>0</recordings_to_keep>
+		</manual>
+		<by_pattern xmlns="http://www.dvblogic.com">
+			<channel_id/>
+			<recordings_to_keep>0</recordings_to_keep>
+			<genre_mask>0</genre_mask>
+			<key_phrase/>
+		</by_pattern>
+	</schedule>
+	<schedule xmlns="http://www.dvblogic.com">
+		<schedule_id>5</schedule_id>
+		<user_param/>
+		<margine_before>-1</margine_before>
+		<margine_after>-1</margine_after>
+		<by_epg xmlns="http://www.dvblogic.com">
+			<channel_id>12640000</channel_id>
+			<program_id>1420540800</program_id>
+			<repeat>true</repeat>
+			<record_series_anytime>true</record_series_anytime>
+			<recordings_to_keep>0</recordings_to_keep>
+			<program xmlns="http://www.dvblogic.com">
+				<program_id>1420540800</program_id>
+				<name>Scènes de ménages</name>
+				<short_desc>4 Des scènes de ménages du quotidien à travers 4 couples de générations différentes. Avec: Gérard Hernandez, Marion Game, Frederic Bouraly, Valérie Karsenti, Loup-Denis Elion, Audrey Lamy, Anne-Elisabeth Blateau, David Mora</short_desc>
+				<subname>412</subname>
+				<categories>movie</categories>
+				<start_time>1420540800</start_time>
+				<duration>1800</duration>
+				<episode_num>94</episode_num>
+				<cat_movie>true</cat_movie>
+			</program>
+		</by_epg>
+		<manual xmlns="http://www.dvblogic.com">
+			<channel_id/>
+			<title/>
+			<start_time>0</start_time>
+			<duration>0</duration>
+			<day_mask>0</day_mask>
+			<recordings_to_keep>0</recordings_to_keep>
+		</manual>
+		<by_pattern xmlns="http://www.dvblogic.com">
+			<channel_id/>
+			<recordings_to_keep>0</recordings_to_keep>
+			<genre_mask>0</genre_mask>
+			<key_phrase/>
+		</by_pattern>
+	</schedule>
+</schedules>
+
